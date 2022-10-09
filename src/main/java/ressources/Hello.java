@@ -14,7 +14,7 @@ public class Hello {
 	}
 	//ressource 1
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
 	public Response sayHello() {
 		return Response.status(200).entity("hello").build();
 	}
@@ -31,6 +31,6 @@ public class Hello {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response sayHello3(@PathParam(value="FirstName") String nom,@PathParam(value="LastName") String prenom) {
-		return Response.status(200).entity("hello"+nom+""+prenom).build();
+		return Response.status(200).entity("hello"+" "+nom+" "+prenom).build();
 	}
 }
