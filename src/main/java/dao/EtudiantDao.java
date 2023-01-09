@@ -38,7 +38,11 @@ public class EtudiantDao implements IEtudiantDao {
 					  while(rs.next()) {
 						   Etudiant e = new Etudiant();      
 						   e.setNom(rs.getString("nom"));
+<<<<<<< HEAD
 						   e.setPrenom(rs.getString("prenom"));
+=======
+						   e.setprenom(rs.getString("prenom"));
+>>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 						   e.setCin(rs.getString("cin"));
 						   e.setClasse(rs.getString("classe"));
 						   e.setBranche(rs.getString("branche"));
@@ -69,7 +73,11 @@ public class EtudiantDao implements IEtudiantDao {
 						  while(rs.next()) {
 							   Etudiant e = new Etudiant();      
 							   e.setNom(rs.getString("nom"));
+<<<<<<< HEAD
 							   e.setPrenom(rs.getString("prenom"));
+=======
+							   e.setprenom(rs.getString("prenom"));
+>>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 							   e.setCin(rs.getString("cin"));
 							   e.setClasse(rs.getString("classe"));
 							   e.setBranche(rs.getString("branche"));
@@ -92,7 +100,11 @@ public class EtudiantDao implements IEtudiantDao {
 				  try {
 					ps=connection.prepareStatement("INSERT INTO etudiant (nom, prenom, cin, classe, branche, id) VALUES (?,?,?,?,?, NULL)");
 					ps.setString(1,E.getNom());
+<<<<<<< HEAD
 					ps.setString(2,E.getPrenom());
+=======
+					ps.setString(2,E.getprenom());
+>>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 					ps.setString(3,E.getCin());
 					ps.setString(4,E.getClasse());
 					ps.setString(5,E.getBranche());
@@ -129,7 +141,11 @@ public class EtudiantDao implements IEtudiantDao {
 		    	try {
 					ps=connection.prepareStatement("UPDATE etudiant SET nom=?,prenom=?,classe=?,branche=? WHERE cin=?");
 					ps.setString(1, E.getNom());
+<<<<<<< HEAD
 					ps.setString(2, E.getPrenom());
+=======
+					ps.setString(2, E.getprenom());
+>>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 					ps.setString(3, E.getClasse());
 					ps.setString(4, E.getBranche());
 					ps.setString(5, E.getCin());
