@@ -18,10 +18,9 @@ import javax.ws.rs.core.Response;
 import org.aopalliance.reflect.Code;
 
 import dao.EmployeeDao;
-import dao.EmployeeDao;
-import dao.IEmployeeDao;
-import dao.IEmployeeDao;
+import dao.IEntityDao;
 import entities.Employee;
+import entities.Etudiant;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -32,7 +31,7 @@ import entities.Employee;
 @Path("employee")
 public class EmployeeApi implements IEmployeeApi {
 	/***couplage faible car on a utilisé les interfaces ****/
-	private IEmployeeDao dao;
+	private IEntityDao<Employee> dao;
 	public EmployeeApi() {
 		dao=new EmployeeDao();
 	};

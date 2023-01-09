@@ -15,8 +15,7 @@ import javax.ws.rs.core.Response;
 
 import dao.EmployeeDao;
 import dao.EtudiantDao;
-import dao.IEmployeeDao;
-import dao.IEtudiantDao;
+import dao.IEntityDao;
 import dao.StaticEtudiantDao;
 import entities.Employee;
 import entities.Etudiant;
@@ -29,7 +28,7 @@ import io.swagger.annotations.ApiResponses;
 @Api(tags = "Etudiant")
 public class EtudiantApi implements IEtudiantApi  {
 	/***couplage faible car on a utilisé les interfaces ****/
-	private IEtudiantDao dao;
+	private IEntityDao<Etudiant> dao;
 	
 	public EtudiantApi() {
 		dao=new StaticEtudiantDao();

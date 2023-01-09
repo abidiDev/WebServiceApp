@@ -8,7 +8,7 @@ import javax.ws.rs.DELETE;
 
 import entities.Etudiant;
 
- public class   StaticEtudiantDao implements IEtudiantDao {
+ public class   StaticEtudiantDao implements IEntityDao<Etudiant> {
 //creating and initializing data
 	 private static final List<Etudiant> etuduantList=new ArrayList<Etudiant>();
 	 static{
@@ -29,17 +29,15 @@ import entities.Etudiant;
 		 List<Etudiant> filtredList=new ArrayList<Etudiant>();
 		 for(int i=0;i<etuduantList.size();i++) {
 			 
-<<<<<<< HEAD
 			 if (etuduantList.get(i).getNom().contains(f)||etuduantList.get(i).getPrenom().contains(f)||etuduantList.get(i).getCin().contains(f)||etuduantList.get(i).getClasse().contains(f)||etuduantList.get(i).getBranche().contains(f)) {
-=======
 			 if (etuduantList.get(i).getNom().contains(f)||etuduantList.get(i).getprenom().contains(f)||etuduantList.get(i).getCin().contains(f)||etuduantList.get(i).getClasse().contains(f)||etuduantList.get(i).getBranche().contains(f)) {
->>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 				filtredList.add(etuduantList.get(i));
 			}
 		 }
-		 return filtredList;
 		 
 	 }
+		return filtredList;
+		}
 // adding new student
     public List<Etudiant> add( Etudiant E) {
     	etuduantList.add(E);

@@ -12,7 +12,7 @@ import entities.Employee;
 import entities.Employee;
 import entities.Employee;
 
-public class EmployeeDao implements IEmployeeDao {
+public class EmployeeDao implements  IEntityDao<Employee> {
 	
 	private static Connection connection;
 	public static PreparedStatement ps;
@@ -119,7 +119,6 @@ public class EmployeeDao implements IEmployeeDao {
     
 
 	}
-
 	@Override
 	public List<Employee> delete(String cin) {
 		try {
@@ -136,5 +135,6 @@ public class EmployeeDao implements IEmployeeDao {
 
 		  return get();
 	}
+
 
 }

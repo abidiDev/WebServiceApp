@@ -38,7 +38,6 @@ public class Etudiant{
 	}
 	@XmlElement(name="prenom")
 	@ApiModelProperty(value ="get prenom")
-<<<<<<< HEAD
 	public String getPrenom() {
 		return prenom;
 	}
@@ -47,7 +46,6 @@ public class Etudiant{
 	}
 	@ApiModelProperty(value ="unique cin")
 	@XmlElement(name="cin")
-=======
 	public String getprenom() {
 		return prenom;
 	}
@@ -55,7 +53,6 @@ public class Etudiant{
 		this.prenom = prenom;
 	}
 	@ApiModelProperty(value ="unique cin")
->>>>>>> 43d9608a705b9be72b663dd5a308634d69886caa
 
 	public String getCin() {
 		return cin;
